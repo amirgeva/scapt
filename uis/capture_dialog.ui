@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>354</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Scapt</string>
+  </property>
+  <widget class="QPushButton" name="closeButton">
+   <property name="geometry">
+    <rect>
+     <x>512</x>
+     <y>304</y>
+     <width>119</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="winDescEdit">
+   <property name="geometry">
+    <rect>
+     <x>128</x>
+     <y>16</y>
+     <width>369</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>16</x>
+     <y>16</y>
+     <width>84</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Window</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectWinButton">
+   <property name="geometry">
+    <rect>
+     <x>512</x>
+     <y>16</y>
+     <width>119</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="dirEdit">
+   <property name="geometry">
+    <rect>
+     <x>128</x>
+     <y>64</y>
+     <width>369</width>
+     <height>32</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>16</x>
+     <y>48</y>
+     <width>84</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Images Directory</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectDirButton">
+   <property name="geometry">
+    <rect>
+     <x>512</x>
+     <y>64</y>
+     <width>119</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="captureButton">
+   <property name="geometry">
+    <rect>
+     <x>128</x>
+     <y>160</y>
+     <width>369</width>
+     <height>129</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Capture</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="frameCB">
+   <property name="geometry">
+    <rect>
+     <x>128</x>
+     <y>112</y>
+     <width>241</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Include Window Frame</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
