@@ -31,9 +31,17 @@ class CaptureDialog(QtGui.QDialog):
         self.dirEdit.setText(self.directory)
         
     def frameCBChanged(self):
+        '''
+        Save in the settings the state of the include frame checkbox
+        '''
         QtCore.QSettings().setValue('frame',getCheck(self.frameCB))        
         
     def selectWindow(self):
+        '''
+        User clicked the select window.
+        Run the xwininfo program that gives a mouse cursor cross to select
+        a window on the desktop, and then extract its title and id
+        '''
         out=subprocess.check_output(['xwininfo'])
         lines=out.split('\n')
         for line in lines:
@@ -47,11 +55,19 @@ class CaptureDialog(QtGui.QDialog):
                 
                 
     def selectDirectory(self):
+        '''
+        Open a file dialog to select the directory where the output
+        images will be stored
+        '''
         self.directory=str(QtGui.QFileDialog.getExistingDirectory(self))
         self.dirEdit.setText(self.directory)
         QtCore.QSettings().setValue('dir',self.directory)
     
     def getNextFilename(self):
+        '''
+        Generate the next image file name.  If the file exists, keep
+        generating until we have a new file
+        '''
         path=''
         while True:
             name='capture_{}.png'.format(str(self.counter).zfill(4))
@@ -62,6 +78,10 @@ class CaptureDialog(QtGui.QDialog):
         return path
     
     def capture(self):
+        '''
+        Run imagemagick's import command, to capture a screen shot of 
+        the selected window
+        '''
         if len(self.winid)>0:
             name=self.getNextFilename()
             frame=''
